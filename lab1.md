@@ -78,8 +78,36 @@ test
 test
 ^C
 ```
-When executing the `cat` coommand and providing the name of a folder, we will run into a problem once again because the commoand is meant to be used on files. Terminal will let that be known by telling us that what we attempting to call the `cat` command on was a folder.
+---
+When executing the `cat` coommand and providing the name of a folder, we will run into a problem once again because the commoand is meant to be used on files. Terminal will let that be known by telling us that what we attempting to call the `cat` command on was a folder. *In order to use folder names when using the cat command you have to be more specific and specify the name of file in the folder you want to concatenate*
 ```
 [user@sahara ~]$ cat lecture1
 cat: lecture1: Is a directory
+// other example
+[user@sahara ~]$ cat lecture1/Hello.java
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class Hello {
+  public static void main(String[] args) throws IOException {
+    String content = Files.readString(Path.of(args[0]), StandardCharsets.UTF_8);    
+    System.out.println(content);
+  }
 ```
+---
+When executing the `cat` command and providin specific file paths the contents of the file will be returned. *You are able to do this on multiple files, it's not limited to a singular file*
+```
+[user@sahara ~/lecture1/messages]$ cat en-us.txt ru.txt zh-cn.txt
+Hello World!
+Привет, мир!
+你好世界
+[user@sahara ~/lecture1/messages]$ cat en-us.txt ru.txt
+Hello World!
+Привет, мир!
+[user@sahara ~/lecture1/messages]$ cat en-us.txt
+Hello World!
+```
+*As you can see we were able to use the cat command on up to 3 files*
+
