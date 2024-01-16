@@ -2,5 +2,12 @@
 ![Image](cat.png)
 
 
-# cd
-By executing'cd' in the terminal you are simply changing the directory to a specified location. In the first example I provide the we change the directoy to the folder lecture1.
+# cd <path>
+By executing `cd`in the terminal you are simply switching from the current directory you are in to the one specifiied. In the first example I provide we switch the directoy from the home directory to lecture1.
+```
+[user@sahara ~]$ pwd
+/home
+[user@sahara ~]$ cd lecture1
+[user@sahara ~/lecture1]$ pwd
+/home/lecture1
+```
