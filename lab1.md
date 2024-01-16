@@ -2,7 +2,7 @@
 ![Image](cat.png)
 
 
-# cd <path>
+# `cd <path>` (Change Directory)
 
 By executing cd without a specified path the directory returns to the orignal directory, in this case that original directory.
 ```
@@ -37,7 +37,7 @@ bash: cd: Hello.java: No such file or directory
 
 ---
 ---
-# ls <path>
+# `ls <path>` (List)
 By executing the `ls` command on a folder the contents of that folder will be returned back.
 ```
 [user@sahara ~]$ ls lecture1
@@ -46,7 +46,7 @@ Hello.class  Hello.java  messages  README
 As we can see the multiples files and folders contained inside lecture1 are returned to us (alphabetical order).
 
 --- 
-When executing the `ls` command by itself the active directory will have it's contents listed.
+When executing the `ls` command without providing an argument, the active directory will have it's contents listed.
 ```
 [user@sahara ~]$ cd lecture1
 [user@sahara ~/lecture1]$ pwd
@@ -69,4 +69,17 @@ That being said attempting to execute the `ls` command on a folder that is not i
 [user@sahara ~]$ ls Hello.java
 ls: cannot access 'Hello.java': No such file or directory
 ```
-
+# `cat <path1> <path2>` (Concatenate)
+When executing the `cat` command without providing an argument we run into a problem because the command is meant to be used on a file, when we don't specifiy that said file it is assumed we are using it on the directory which just won't work. The program will then repeatedly ask for a user input and will only be exited by doing `Ctrl + C`.
+```
+[user@sahara ~/lecture1]$ cat
+test
+test
+test
+^C
+```
+When executing the `cat` coommand and providing the name of a folder, we will run into a problem once again because the commoand is meant to be used on files. Terminal will let that be known by telling us that what we attempting to call the `cat` command on was a folder.
+```
+[user@sahara ~]$ cat lecture1
+cat: lecture1: Is a directory
+```
