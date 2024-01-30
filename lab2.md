@@ -179,3 +179,11 @@ Private Key:
 
 I would say quite literally everything I've learned in these weeks are something I didn't know before, but to be more specific I would say the use of the `ssh` command was the most fascinating. Being able to connect and see myself run commannds remotely onto a computer through my laptop's terminal was pretty cool. I was not aware something like this could be done so easily, I look forward to seeing how we use this component in future labs.
 
+‎ 
+
+---
+
+# Chat GPT:
+
+finish later
+
