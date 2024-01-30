@@ -177,7 +177,7 @@ Private Key:
 
 # Part 3:
 
-I would say quite literally everything I've learned in these weeks are something I didn't know before, but to be more specific I would say the use of the `ssh` command was the most fascinating. Being able to connect and see myself run commannds remotely onto a computer through my laptop's terminal was pretty cool. I was not aware something like this could be done so easily, I look forward to seeing how we use this component in future labs.
+I would say quite literally everything I've learned in these weeks are something I didn't know before, but to be more specific I would say the use of the `ssh` command was the most fascinating. Had no clue my computer had keys specific to it that could be used this way, to for example skip logging in. Being able to connect and see myself run commands remotely onto a computer through my laptop's terminal was overall pretty cool. I was not aware something like this could be done so easily, I look forward to seeing how we use this component in future labs.
 
 ‎ 
 
@@ -185,5 +185,27 @@ I would say quite literally everything I've learned in these weeks are something
 
 # Chat GPT:
 
-finish later
+![Image](image.png)
+![Image](codeprompt.png)
+![Image](codegiven.png)
+
+---
+
+For some reason it was importing ArrayList/Lists to make the code. I felt like this wasn't necessary so I tweaked the code a little to get rid of that. I got rid of the imports included at that top and simply wrote `private String chatMessages = "";` instead of the List originally there. Honestly had no clue how to use the query methods until I saw it written out in front of me by ChatGPT. I feel like I am lacking in knowledge surrounding java syntax and it's nice that I am able to use AI like this.
+
+---
+
+Also had to tweak everything after the first for loop as it was making use of things that can only be used when importing ArrayLists/Lists. 
+
+![Image](ifcode.png)
+‎
+‎ 
+
+Much easier to read and understand from my perspective by writing this part of the code like this, the code that was there prior was much more confusing and made use of those imports that were not needed as I talked about earlier. 
+
+---
+
+
+
+
 
