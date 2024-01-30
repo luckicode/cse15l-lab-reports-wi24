@@ -119,9 +119,17 @@ public class Server {
 ![Image](screenshot2.png)
 ---
 In the screenshots I provided above, the methods that seem to be called when a `/add-message` request is made are `handle` from `Server.java` and `handleRequest` from `ChatServer.java`.
-There are many important parts of this code that should be taken into consideration. I would say the most relevant ones are the use of `getQuery`, `getPath` and the field `chatMessages`. The use of `getPath` allows for there to be a check for the `/add-message` request itself. Without this we wouldn't be able to know when a user wants to send a request as the path for it would not be found. The use of `getQuery` follows after and allows for the rest of the parameters that go hand in hand with the path to collaborate together. The method specifically extracts the query component of the URI, which typically contains key-value pairs separated by "&" symbols. This extracted query string is then processed to obtain individual parameters, as demonstrated in the subsequent code where it is split into an array of parameters.
+There are many important parts of this code that should be taken into consideration. I would say the most relevant ones are the use of `getQuery`, `getPath` and the field `chatMessages`. The use of `getPath` allows for there to be a check for the `/add-message` request itself. Without this we wouldn't be able to know when a user wants to send a request as the path for it would not be found. The use of `getQuery` follows after and allows for the rest of the parameters that go hand in hand with the path to collaborate together. The method specifically extracts the query component of the URI, is separated by "&" symbols. This query string will then take specfic parameters which can be found in the for loop that comes after. ( `s` `user` `=` )
 
-
+```
+for (String param : parameters) {
+                String[] parts = param.split("=");
+                if (parts.length == 2) {
+                    if (parts[0].equals("s")) {
+                        message = parts[1];
+                    } else if (parts[0].equals("user")) {
+                        user = parts[1];
+```
 The  most relevant field that is changed in the `ChatHandler` class from doing the `/add-message` request can be found in four lines of my code.
 ```
 if (message != null && user != null) {
@@ -129,4 +137,31 @@ if (message != null && user != null) {
     chatMessages = chatMessages + chatMessage;
 return chatMessages;
 ```
-Here we can see that, this is where each request is being stored and updated each time a `/add-message` request is made. More specifcally `chatMessages` which is returned at the end is the field that is being updated each time said request is made.
+Here we can see that, this is where each request message is being stored and updated each time a `/add-message` request is made. More specifcally `chatMessages` which is returned at the end is the field that is being updated each time said request is made and then displayed on the website.
+---
+
+# Part 2:
+
+No Password Login:
+
+![Image](screenshot1.png)
+
+---
+
+Public Key:
+
+![Image](screenshot1.png)
+
+---
+
+Private Key:
+
+![Image](screenshot1.png)
+
+---
+
+
+# Part 3:
+
+I would say quite literally everything I've learned in these weeks are something I didn't know before, but to be more specific I would say the use of the `ssh` command was the most fascinating. Being able to connect and see myself run commannds remotely onto a computer through my laptop's terminal was pretty cool. I was not aware something like this could be done so easily, I look forward to seeing how we use this component in future labs.
+
