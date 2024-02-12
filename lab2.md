@@ -123,6 +123,9 @@ public class Server {
 In the screenshots I provided above, the methods that seem to be called when a `/add-message` request is made are `handle` from `Server.java` and `handleRequest` from `ChatServer.java`.
 There are many important parts of this code that should be taken into consideration. I would say the most relevant ones are the use of `getQuery`, `getPath` and the field `chatMessages`. The use of `getPath` allows for there to be a check for the `/add-message` request itself. Without this we wouldn't be able to know when a user wants to send a request as the path for it would not be found. The use of `getQuery` follows after and allows for the rest of the parameters that go hand in hand with the path to collaborate together. The method specifically extracts the query component of the URI, is separated by "&" symbols. This query string will then take specfic parameters which can be found in the for loop that comes after. ( `s` `user` `=` )
 
+
+Relevant arguments from the handleRequest method include: `URI url:` This is the input parameter that represents the `URI` that the method is grabbing and processing. `String queryString` this string is taken from the URI, it represents the query part of the URL.  `String message`  holds the information provided for the "s" parameter in the query string. `String user` stores the data associated with the "user" parameter in the query string.
+
 ‎ 
 
 ```
