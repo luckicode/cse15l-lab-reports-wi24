@@ -1,4 +1,4 @@
-# Lab Report 2 - Isaac Robles
+# Lab Report 2 - Isaac Robles (Resubmission)
 ---
 # Program code : 
 
@@ -199,7 +199,7 @@ defin@BOOK-NGRBMV3GI4 MINGW64 ~/.ssh
 $ ls /c/Users/defin/.ssh/id_ed*
 /c/Users/defin/.ssh/id_ed25519  /c/Users/defin/.ssh/id_ed25519.pub
 ```
-There are the two paths to the public/privat key. The path with.pub is the public key and the private is the other path. Down below I will include myself logging into the remote machine without being asked for a password.
+There are the two paths to the public/private key. The path with `.pub` is the public key and the private is the other path. Down below I will include myself logging into the remote machine without being asked for a password.
 
 ```
 defin@BOOK-NGRBMV3GI4 MINGW64 ~/.ssh
