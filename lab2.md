@@ -153,7 +153,7 @@ return chatMessages;
 
 ---
 
-Here we can see that, this is where each request message is being stored and updated each time a `/add-message` request is made. More specifcally `chatMessages` which is returned at the end is the field that is being updated each time said request is made and then displayed on the website.
+Here we can see that, this is where each request message is being stored and updated each time a `/add-message` request is made. More specifcally `user` and `message` are being changed and returned concatenated with eachouther through `chatMessage` which is returned at the end and is being updated each time said request is made and then displayed on the website. `chatMessage`  is changed by concatenated the `user` and `message`  along with a colon and a newline. For example, if user is` "isaac" `it'll become "isaac:", and if the message is `"hi"` it'll then become `isaac: hi` and then chatMessages will be updated and return `"isaac: hi"`.
 
 ---
 
