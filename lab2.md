@@ -153,29 +153,79 @@ return chatMessages;
 
 ---
 
-Here we can see that, this is where each request message is being stored and updated each time a `/add-message` request is made. More specifcally `user` and `message` are being changed and returned concatenated with eachouther through `chatMessage` which is returned at the end and is being updated each time said request is made and then displayed on the website. `chatMessage`  is changed by concatenated the `user` and `message`  along with a colon and a newline. For example, if user is` "isaac" `it'll become "isaac:", and if the message is `"hi"` it'll then become `isaac: hi` and then chatMessages will be updated and return `"isaac: hi"`.
+Here we can see that, this is where each request message is being stored and updated each time a `/add-message` request is made. More specifcally `user` and `message` are being changed and returned concatenated with eachouther through `chatMessage` which is returned at the end and is being updated each time said request is made and then displayed on the website. `chatMessage`  is changed by concatenated the `user` and `message`  along with a colon and a newline. For example, if user is` "isaac" `it'll become `isaac:`, and if the message is `hi` it'll then become `isaac: hi` and then chatMessages will be updated and return `isaac: hi`.
 
 ---
 
 # Part 2:
 
-No Password Login:
+First I will run `$ssh key-gen` to create the public and private keys. We will see that they are stored in the `/.ssh/` directory. 
 
-![Image](nopasslogin.png)
+```
+Your identification has been saved in /c/Users/defin/.ssh/id_ed25519
+Your public key has been saved in /c/Users/defin/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:p/sk8gHNBParPM0p9Rq1ImQCFSzlv6P2MRln2O8vE18 defin@BOOK-NGRBMV3GI4
+The key's randomart image is:
++--[ED25519 256]--+
+|   o+.o          |
+|  .o.. o         |
+|  ...   o        |
+|   . . * .       |
+|    . B S o      |
+|     = % B..  E  |
+|      & X =o .   |
+|    .. X Xo .    |
+|   .... +.o+.    |
++----[SHA256]-----+
+```
 
----
+Next we move into the `/.ssh/` directory, where we can use the `ls` the files where the public and private key are stored. 
 
-Public Key:
+```
+defin@BOOK-NGRBMV3GI4 MINGW64 ~
+$ cd /c/Users/defin/.ssh/
 
-![Image](lspublic.png)
+defin@BOOK-NGRBMV3GI4 MINGW64 ~/.ssh
+$ ls
+id_ed25519  id_ed25519.pub  known_hosts
 
----
+```
 
-Private Key:
+We can then get the absolute path to the private/public keys by running ls with the files we found.
 
-![Image](lsprivate.png)
+```
+defin@BOOK-NGRBMV3GI4 MINGW64 ~/.ssh
+$ ls /c/Users/defin/.ssh/id_ed*
+/c/Users/defin/.ssh/id_ed25519  /c/Users/defin/.ssh/id_ed25519.pub
+```
+There are the two paths to the public/privat key. The path with.pub is the public key and the private is the other path. Down below I will include myself logging into the remote machine without being asked for a password.
 
----
+```
+defin@BOOK-NGRBMV3GI4 MINGW64 ~/.ssh
+$ ssh isrobles@ieng6-201.ucsd.edu
+Last login: Sun Feb 11 23:14:16 2024 from 128.54.214.177
+quota: Cannot resolve mountpoint path /home/linux/dsmlp/.snapshot/daily.2024-01-12_0010: Stale file handle
+quota: Cannot resolve mountpoint path /home/linux/ieng6/cs120wi24/cs120wi24dx/.snapshot/hourly.2024-01-29_1201: Stale file handle
+Hello isrobles, you are currently logged into ieng6-201.ucsd.edu
+
+You are using 0% CPU on this system
+
+Cluster Status 
+Hostname     Time    #Users  Load  Averages  
+ieng6-201   23:15:01   5  0.33,  0.55,  0.49
+ieng6-202   23:15:01   2  0.03,  0.20,  0.31
+ieng6-203   23:15:01   6  0.12,  0.39,  0.74
+
+ 
+
+To begin work for one of your courses [ cs15lwi24 ], type its name
+at the command prompt.  (For example, "cs15lwi24", without the quotes).
+
+To see all available software packages, type "prep -l" at the command prompt,
+or "prep -h" for more options.
+[isrobles@ieng6-201]:~:52$
+```
 
 
 # Part 3:
