@@ -33,7 +33,16 @@ Time: 0.007
 OK (1 test)
 ```
 
-When we write another test that is supposed to pass if the method works as intended, we can see that it fails and instead of the the expected return for the first element being the last element of the original array `arr` (because it should be reversed) we just get 0 for that first element. This lets us pinpoint the bug to how elements are being assigned. 
+Now we will write another test that is supposed to pass if the method works as intended. (down below) 
+
+```
+  @Test 
+  public void testReversedWithFailure() {
+    int[] inputArray = {1, 2, 3};
+    assertArrayEquals(new int[]{3, 2, 1}, ArrayExamples.reversed(inputArray));
+  }
+```
+We will see that it fails and instead of the the expected return for the first element being the last element of the original array `arr` (because it should be reversed) we just get 0 for that first element. This lets us pinpoint the bug to how elements are being assigned. 
 
 ```
 $ java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore ArrayTests
