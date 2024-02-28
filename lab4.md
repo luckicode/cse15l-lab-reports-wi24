@@ -1,7 +1,7 @@
 # Lab Report 4 #
 
 ---
-## `Step 4. Log into ieng6` ##
+## Step 4: Log into ieng6 ##
 
 We open our terminal in vscode using the shortcut `CTRL + ' `. Now we have to login to the ieng6 machine. There isn't really much shortcuts we can do here just type in the command `ssh isrobles@ieng6-201.ucsd.edu`, in order to login. 
 Once I had everything typed in I pressed `<ENTER>`
@@ -35,7 +35,7 @@ or "prep -h" for more options.
 
 ---
 
-## `Step 5: Clone your fork of the repository from your Github account (using the SSH URL)` ##
+## Step 5: Clone your fork of the repository from your Github account (using the SSH URL) ##
 
 Once again there really isn't any special shortcuts we can, use `git clone` and paste in the SSH URL after to perform the cloning the full command I typed in was `git clone git@github.com:luckicode/lab7.git`. After `git clone` I used `CTRL + V` to paste in the url previously copied from the writeup, which was done using `CTRL + C`. Once you got everything in click `<enter>` 
 ```
@@ -47,7 +47,9 @@ Receiving objects: 100% (58/58), 376.39 KiB | 230.00 KiB/s, done.
 Resolving deltas: 100% (21/21), done.
 ```
 
-## `Step 6: Run the tests, demonstrating that they fail` ##
+---
+
+## Step 6: Run the tests, demonstrating that they fail ##
 
 In order to run the tests, first we want to move into the correct directory. In order to do this I typed in `cd` and then the letter `L` followed by `<TAB>` to autocomplete the rest of the command `lab7`. We have no other folders that started with the letter L so this just autocompletes without any issues and we click `<ENTER>` to run the command. `cd lab7/`.
 ```
@@ -80,11 +82,16 @@ Tests run: 2,  Failures: 1
 
 This lets us see which tests are failing and how many total.
 
+---
+
 ## 'Step 7: Edit the code file to fix the failing test' ## 
 
 To fix this tests we are gonna use `vim` to edit the code directly in the terminal. In order to do so we will type `vim` followed by the letter L and then we can type in the letter L followed by clicking `<TAB>` to autocomplete `ListExamples`. We then type in .java to complete the entire command and so we can just hit `<ENTER>` in order to open the file in vim. `vim ListExamples.java`. 
 
 Once in the file we can see that we need to change line 44. `index1` in that line should be changed to index2. We can use our knowledge of vim to type a command that allows us to quickly do this change. I hold down `SHIFT>` and then hit `:` on my keyboard in order to enter the command line mode. we can then type this command in `:44s/index1/index2/` and hit `<ENTER>` after to run it. We can then see that line 44 was edited and index1 was changed to index2. This is the only edit we need to make so we can save and exit by once again entering the command line mode by holding down `<SHIFT>` and pressing `:`. We then type in `wq` to save and exit.
+
+
+---
 
 ## 'Step 8: Run the tests, demonstrating that they now succeed' ## 
 
@@ -99,7 +106,25 @@ Time: 0.012
 
 OK (2 tests)
 ```
-## 'Commit and push the resulting change to your Github account (you can pick any commit message!)' ##
+
+---
+
+## Step 9: 'Commit and push the resulting change to your Github account (you can pick any commit message!)' ##
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
 
   
 
