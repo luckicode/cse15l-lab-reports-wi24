@@ -1,4 +1,3 @@
-
 # Lab Report 4 #
 
 ---
@@ -96,7 +95,7 @@ Once in the file we can see that we need to change line 44. `index1` in that lin
 
 ## Step 8: Run the tests, demonstrating that they now succeed ## 
 
-Now we will run the tests again to show that our edit worked. We can go back to the previous compile command we used at the start by pressing the up arrow key twice `<UP>` `<UP>`, and then we click enter to compile. We then go back to the command to run the tests by pressing the up arrow key twice again `<UP>` `<UP>` and then click `<ENTER>` to run the command once we reach it This will run the test file `ListExamplesTests` and show us that the tests are now passing.
+Now we will run the tests again to show that our edit worked. We can go back to the previous compile command we used at the start by pressing the up arrow key twice `<UP>` `<UP>`, and then we click `<ENTER>` to compile. We then go back to the command to run the tests by pressing the up arrow key twice again `<UP>` `<UP>` and then click `<ENTER>` to run the command. This will run the test file `ListExamplesTests` and show us that the tests are now passing.
 
 ```
 [isrobles@ieng6-201]:lab7:108$ javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
@@ -112,7 +111,7 @@ OK (2 tests)
 
 ## Step 9: Commit and push the resulting change to your Github account (you can pick any commit message!) ##
 
-Next we will run the command that directly commits our changes into our forked project. There's not really any shortcuts when typing this command we just have to do it directly. ` git commit -a -m "debugged listexamplestests" `. The -m flag is used to add a commit message directly through the terminal. After we type it in we click `<ENTER>` to run it.
+Next we will run the command that directly commits our changes into our forked project. There's not really any shortcuts when typing this command we just have to do it directly. ` git commit -a -m "debugged listexamplestests" `. The `-m` flag is used to add a commit message directly through the terminal. After we type it in we click `<ENTER>` to run it.
 
 ```
 
