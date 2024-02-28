@@ -61,7 +61,7 @@ Next we're gonna have to compile / run the tests. Using the writeup from lab4, w
 [isrobles@ieng6-201]:lab7:103$
 ```
 
-Next we're gonna run the file with the tests in it. Once again we can copy the command from the writeup we just need to change a couple things in order to run it on the file we want for this situation. We copy the command using `CTRL + V` and paste it using `CTRL + V` `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore`. After pasting it in, we still need to add a litle bit more to command. Already being at the end of the paste we simply add a space by pressing the spacebar, and then type in the letter L followed by <TAB> this will autocomplete and give `ListExamples`, but we want to run it on the test file so we type in a capital T and then clicl tab again to get `ListExamplesTests`. `(java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests)`
+Next we're gonna run the file with the tests in it. Once again we can copy the command from the writeup we just need to change a couple things in order to run it on the file we want for this situation. We copy the command using `CTRL + V` and paste it using `CTRL + V` `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore`. After pasting it in, we still need to add a litle bit more to command. Already being at the end of the paste we simply add a space by pressing the spacebar, and then type in the letter L followed by `<TAB>` this will autocomplete and give `ListExamples`, but we want to run it on the test file so we type in a capital T and then click `<TAB>` again to get `ListExamplesTests` autocompleted. This gives us the full command we want and we click `<ENTER>` to run the command. `(java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests)`
 
 ```
 [isrobles@ieng6-201]:lab7:103$ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests 
@@ -78,6 +78,29 @@ FAILURES!!!
 Tests run: 2,  Failures: 1
 ```
 
+This lets us see which tests are failing and how many total.
 
+## 'Step 7: Edit the code file to fix the failing test' ## 
+
+To fix this tests we are gonna use `vim` to edit the code directly in the terminal. In order to do so we will type `vim` followed by the letter L and then we can type in the letter L followed by clicking `<TAB>` to autocomplete `ListExamples`. We then type in .java to complete the entire command and so we can just hit `<ENTER>` in order to open the file in vim. `vim ListExamples.java`. 
+
+Once in the file we can see that we need to change line 44. `index1` in that line should be changed to index2. We can use our knowledge of vim to type a command that allows us to quickly do this change. I hold down `SHIFT>` and then hit `:` on my keyboard in order to enter the command line mode. we can then type this command in `:44s/index1/index2/` and hit `<ENTER>` after to run it. We can then see that line 44 was edited and index1 was changed to index2. This is the only edit we need to make so we can save and exit by once again entering the command line mode by holding down `<SHIFT>` and pressing `:`. We then type in `wq` to save and exit.
+
+## 'Step 8: Run the tests, demonstrating that they now succeed' ## 
+
+Now we will run the tests again to show that our edit worked. We can go back to the previous compile command we used at the start by pressing the up arrow key twice `<UP>` `<UP>`, and then we click enter to compile. We then go back to the command to run the tests by pressing the up arrow key twice again `<UP>` `<UP>`. This will run the test file `ListExamplesTests` and show us that the tests are now passing.
+
+```
+[isrobles@ieng6-201]:lab7:108$ javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
+[isrobles@ieng6-201]:lab7:109$ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests
+JUnit version 4.13.2
+..
+Time: 0.012
+
+OK (2 tests)
+```
+## 'Commit and push the resulting change to your Github account (you can pick any commit message!)' ##
+
+  
 
 
