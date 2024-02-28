@@ -1,3 +1,4 @@
+
 # Lab Report 4 #
 
 ---
@@ -111,18 +112,42 @@ OK (2 tests)
 
 ## Step 9: Commit and push the resulting change to your Github account (you can pick any commit message!) ##
 
+Next we will run the command that directly commits our changes into our forked project. There's not really any shortcuts when typing this command we just have to do it directly. ` git commit -a -m "debugged listexamplestests" `. The -m flag is used to add a commit message directly through the terminal.      
+
+```
+
+[isrobles@ieng6-201]:lab7:112$ git commit -a -m "debugged listexamplestests"                    
+[main a9f9afa] debugged listexamplestests
+ Committer: Isaac Robles <isrobles@ieng6-201.ucsd.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 
-
-
-
-
-
-
-
-
-
-
+```
+Next we will run the command that pushes the commited changes. Once again, there's no shortcuts to do this we just have to type it in and then click `<ENTER>` to run it.
+```
+[isrobles@ieng6-201]:lab7:113$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 304 bytes | 304.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:luckicode/lab7.git
+   327ab1a..a9f9afa  main -> main
+```
 
 ---
 
