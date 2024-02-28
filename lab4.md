@@ -84,7 +84,7 @@ This lets us see which tests are failing and how many total.
 
 ---
 
-## 'Step 7: Edit the code file to fix the failing test' ## 
+## Step 7: Edit the code file to fix the failing test ## 
 
 To fix this tests we are gonna use `vim` to edit the code directly in the terminal. In order to do so we will type `vim` followed by the letter L and then we can type in the letter L followed by clicking `<TAB>` to autocomplete `ListExamples`. We then type in .java to complete the entire command and so we can just hit `<ENTER>` in order to open the file in vim. `vim ListExamples.java`. 
 
@@ -93,7 +93,7 @@ Once in the file we can see that we need to change line 44. `index1` in that lin
 
 ---
 
-## 'Step 8: Run the tests, demonstrating that they now succeed' ## 
+## Step 8: Run the tests, demonstrating that they now succeed ## 
 
 Now we will run the tests again to show that our edit worked. We can go back to the previous compile command we used at the start by pressing the up arrow key twice `<UP>` `<UP>`, and then we click enter to compile. We then go back to the command to run the tests by pressing the up arrow key twice again `<UP>` `<UP>`. This will run the test file `ListExamplesTests` and show us that the tests are now passing.
 
@@ -109,7 +109,7 @@ OK (2 tests)
 
 ---
 
-## Step 9: 'Commit and push the resulting change to your Github account (you can pick any commit message!)' ##
+## Step 9: Commit and push the resulting change to your Github account (you can pick any commit message!) ##
 
 
 
