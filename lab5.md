@@ -17,7 +17,7 @@ File ListExamples.java not found
 ```
 
 ### 1 Answer ###
-**Isaac Robles** <span style="background-color: yellow;">STAFF</span>
+**Isaac Robles** <span style="background-color: yellow; font-size: 80%;">STAFF</span>
 <span style="color: gray; font-style: italic;">2 minutes ago</span>
 
 It seems like there might be a problem with how you wrote the part of the script that is supposed to clone files, aren't you missing information that should show up when something is successfully cloned?
